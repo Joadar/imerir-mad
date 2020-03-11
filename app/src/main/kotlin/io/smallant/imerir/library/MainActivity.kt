@@ -3,7 +3,9 @@ package io.smallant.imerir.library
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import io.smallant.imerir.library.data.models.Author
 import io.smallant.imerir.library.data.pojo.Book
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +18,13 @@ class MainActivity : AppCompatActivity() {
         Log.d("MainLog", "book = $book")
 
         // TODO Part I
-        //Log.d("MainLog", "author = $author")
+        val calendar = Calendar.getInstance().apply {
+            // Month start at 0, Calendar.JULY = 6
+            set(1965, Calendar.JULY, 31)
+        }
+
+        val author = Author(1, "Joanne", "Rowling", calendar.time)
+        Log.d("MainLog", "author = $author")
         //"Joanne Rowling was born on 31/07/1965"
     }
 }
