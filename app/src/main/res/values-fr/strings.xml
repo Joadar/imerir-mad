@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="book_price">%.2f €</string>
+
+</resources>

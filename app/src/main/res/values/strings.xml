@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Library</string>
+    <string name="app_name" translatable="false">Library</string>
+
+    <string name="book_price">$%.2f</string>
 </resources>
