@@ -1,6 +1,7 @@
 package io.smallant.imerir.library.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -33,6 +34,11 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
         }
 
         recyclerAdapter.setItems(viewModel.sections)
+
+        viewModel.getBook().observe(this, androidx.lifecycle.Observer { book ->
+            Log.d("MainLog", "getBook = $book")
+        })
+
     }
 
     override fun onBookClicked(book: Book) {
