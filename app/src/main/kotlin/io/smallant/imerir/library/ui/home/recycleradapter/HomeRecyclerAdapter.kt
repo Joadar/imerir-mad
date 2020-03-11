@@ -2,6 +2,7 @@ package io.smallant.imerir.library.ui.home.recycleradapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import io.smallant.imerir.library.Constants
 import io.smallant.imerir.library.R
 import io.smallant.imerir.library.base.BaseRecyclerAdapter
 import io.smallant.imerir.library.base.BaseViewHolder
@@ -13,6 +14,7 @@ class HomeRecyclerAdapter(private val onSectionClickListener: OnSectionClickList
 
     companion object {
         private const val FEATURED_TYPE = 1
+        private const val LATESTED_TYPE = 2
         // TODO Part III
     }
 
@@ -21,14 +23,17 @@ class HomeRecyclerAdapter(private val onSectionClickListener: OnSectionClickList
         return when (viewType) {
             FEATURED_TYPE -> SectionViewHolder(layoutInflater.inflate(R.layout.item_featured_section, parent, false), onSectionClickListener)
             // TODO Part III
-            else -> SectionViewHolder(layoutInflater.inflate(R.layout.item_featured_section, parent, false), onSectionClickListener)
+            else -> SectionViewHolder(layoutInflater.inflate(R.layout.item_lasted_section, parent, false), onSectionClickListener)
         }
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when (items[position]) {
+        return when (val item = items[position]) {
             // TODO Part III
-            is Section -> FEATURED_TYPE
+            is Section -> if (item.id == Constants.Section.FEATURED_ID)
+                FEATURED_TYPE
+            else
+                LATESTED_TYPE
             else -> super.getItemViewType(position)
         }
     }

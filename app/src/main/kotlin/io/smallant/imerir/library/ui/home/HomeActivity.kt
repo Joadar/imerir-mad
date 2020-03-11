@@ -46,7 +46,8 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
 
         // TODO Part III
         val sections = arrayListOf(
-                Section(Constants.Section.FEATURED_ID, "Featured", books)
+                Section(Constants.Section.FEATURED_ID, "Featured", books),
+                Section(Constants.Section.LATESTED_ID, "Latested", books)
         )
 
         recycler.apply {
