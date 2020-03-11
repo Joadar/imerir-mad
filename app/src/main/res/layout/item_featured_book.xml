@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    TODO Part II
+     Use cover_hp.jpeg as drawable in /drawable-xxxhdpi
+     item width: 170dp
+     item style: @style/AppTheme.Item
+     image height: 220dp
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit me"/>
+
+</FrameLayout>

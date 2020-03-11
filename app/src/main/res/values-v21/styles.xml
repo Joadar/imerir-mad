@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="AppTheme.Item">
+        <item name="android:stateListAnimator">@animator/active_raise</item>
+    </style>
+
+</resources>
