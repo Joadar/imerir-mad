@@ -6,6 +6,7 @@ import android.widget.TextView
 import io.smallant.imerir.library.R
 import io.smallant.imerir.library.base.BaseViewHolder
 import io.smallant.imerir.library.data.models.Book
+import io.smallant.imerir.library.extensions.setImage
 
 class BookViewHolder(view: View): BaseViewHolder<Book>(view) {
 
@@ -20,6 +21,7 @@ class BookViewHolder(view: View): BaseViewHolder<Book>(view) {
         note?.text = item.note.toString()
         price.text = itemView.context.getString(R.string.book_price, item.price)
         // TODO Part IX
+        cover.setImage(item.cover)
         description?.text = item.description
     }
 
