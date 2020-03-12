@@ -5,6 +5,6 @@ import io.smallant.imerir.library.data.sources.remote.BookRemoteDataSource
 
 class BookRepository(private val localDataSource: BookLocalDataSource, private val remoteDataSource: BookRemoteDataSource) {
 
-    //suspend fun getBooks() = remoteDataSource.getBooks()
+    suspend fun getBooks() = remoteDataSource.getBooks()
 
 }

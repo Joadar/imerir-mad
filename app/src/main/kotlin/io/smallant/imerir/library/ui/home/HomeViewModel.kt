@@ -10,8 +10,8 @@ import kotlinx.coroutines.Dispatchers
 class HomeViewModel(bookRepository: BookRepository): ViewModel() {
 
     val books: LiveData<List<Book>> = liveData(Dispatchers.IO) {
-//        val retrievedData = bookRepository.getBooks()
-//        emit(retrievedData)
+        val retrievedData = bookRepository.getBooks()
+        emit(retrievedData)
     }
 
 }

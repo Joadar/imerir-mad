@@ -13,9 +13,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 private val dataModule = module {
-    // TODO Part XII
+    // TODO Part VII
     single { BookLocalDataSource() }
-    single { BookRemoteDataSource() }
+    single { BookRemoteDataSource(get()) }
     single { BookRepository(get(), get()) }
 }
 
