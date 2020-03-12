@@ -32,10 +32,6 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
 
         recyclerAdapter.setItems(viewModel.sections)
 
-        viewModel.getBook().observe(this, androidx.lifecycle.Observer { book ->
-            Log.d("MainLog", "getBook = $book")
-        })
-
     }
 
     override fun onBookClicked(book: Book) {
