@@ -50,6 +50,7 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
     }
 
     override fun onBookClicked(book: Book) {
+        // TODO Part X
         Toast.makeText(this, "${book.title} clicked", Toast.LENGTH_LONG).show()
     }
 

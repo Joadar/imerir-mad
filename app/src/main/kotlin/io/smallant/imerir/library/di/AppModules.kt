@@ -20,6 +20,7 @@ private val dataModule = module {
 }
 
 private val viewModelModule = module {
+    // TODO Part X
     viewModel { HomeViewModel(get()) }
 }
 
