@@ -9,4 +9,9 @@ object Constants {
         // TODO Part III
         const val LATESTED_ID = 2
     }
+
+    object Extra {
+        const val BOOK_ID = "book_id"
+        const val BOOK_TITLE = "book_title"
+    }
 }

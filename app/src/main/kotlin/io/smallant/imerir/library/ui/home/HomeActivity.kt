@@ -1,5 +1,6 @@
 package io.smallant.imerir.library.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import io.smallant.imerir.library.Constants
 import io.smallant.imerir.library.R
 import io.smallant.imerir.library.data.models.Book
 import io.smallant.imerir.library.data.models.Section
+import io.smallant.imerir.library.ui.detail.DetailActivity
 import io.smallant.imerir.library.ui.home.recycleradapter.HomeRecyclerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -52,6 +54,11 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
     override fun onBookClicked(book: Book) {
         // TODO Part X
         Toast.makeText(this, "${book.title} clicked", Toast.LENGTH_LONG).show()
+        val intent: Intent = Intent(this, DetailActivity::class.java).apply {
+            putExtra(Constants.Extra.BOOK_ID, book.id)
+            putExtra(Constants.Extra.BOOK_TITLE, book.title)
+        }
+        startActivity(intent)
     }
 
     override fun onSectionClicked(section: Section) {

@@ -5,6 +5,7 @@ import io.smallant.imerir.library.data.sources.BookRepository
 import io.smallant.imerir.library.data.sources.local.BookLocalDataSource
 import io.smallant.imerir.library.data.sources.remote.BookApiService
 import io.smallant.imerir.library.data.sources.remote.BookRemoteDataSource
+import io.smallant.imerir.library.ui.detail.DetailViewModel
 import io.smallant.imerir.library.ui.home.HomeViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -22,6 +23,7 @@ private val dataModule = module {
 private val viewModelModule = module {
     // TODO Part X
     viewModel { HomeViewModel(get()) }
+    viewModel { DetailViewModel() }
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
