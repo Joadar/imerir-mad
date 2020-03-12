@@ -1,7 +1,6 @@
 package io.smallant.imerir.library.ui.home.viewholder
 
 import android.view.View
-import android.widget.AdapterView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import io.smallant.imerir.library.Constants

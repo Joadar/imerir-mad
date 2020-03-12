@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.smallant.imerir.library.Constants
 import io.smallant.imerir.library.R
-import io.smallant.imerir.library.data.models.Comment
 import io.smallant.imerir.library.ui.detail.adapter.CommentRecyclerAdapter
 import kotlinx.android.synthetic.main.activity_detail.*
 import org.koin.android.ext.android.inject
@@ -31,18 +30,17 @@ class DetailActivity: AppCompatActivity() {
             recyclerAdapter.setItems(it)
         })
 
+        viewModel.editTextValue.observe(this, Observer {
+            value.setText(it)
+        })
+
         recycler.apply {
             adapter = recyclerAdapter
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         }
 
         publish.setOnClickListener {
-            val contentValue: String = value.text.toString()
-            if (contentValue.isNotEmpty()) {
-                val comment = Comment(0, bookId, contentValue)
-                viewModel.saveComment(comment)
-                value.setText("")
-            }
+            viewModel.onPublishClicked(bookId, value.text.toString())
         }
 
     }

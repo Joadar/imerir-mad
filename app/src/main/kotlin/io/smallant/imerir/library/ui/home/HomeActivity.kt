@@ -27,7 +27,6 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // TODO Part III
         recycler.apply {
             adapter = recyclerAdapter
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
@@ -35,16 +34,8 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
 
         viewModel.books.observe(this, Observer { books ->
             val sections = arrayListOf(
-                Section(
-                    Constants.Section.FEATURED_ID,
-                    "Featured",
-                    books
-                ),
-                Section(
-                    Constants.Section.LATESTED_ID,
-                    "Latested",
-                    books
-                )
+                Section(Constants.Section.FEATURED_ID, "Featured", books),
+                Section(Constants.Section.LATESTED_ID, "Latested", books)
             )
             recyclerAdapter.setItems(sections)
         })
@@ -52,7 +43,6 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
     }
 
     override fun onBookClicked(book: Book) {
-        // TODO Part X
         Toast.makeText(this, "${book.title} clicked", Toast.LENGTH_LONG).show()
         val intent: Intent = Intent(this, DetailActivity::class.java).apply {
             putExtra(Constants.Extra.BOOK_ID, book.id)

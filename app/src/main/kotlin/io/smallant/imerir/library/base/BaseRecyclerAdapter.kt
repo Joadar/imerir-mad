@@ -2,7 +2,7 @@ package io.smallant.imerir.library.base
 
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseRecyclerAdapter<T: Any, VH: BaseViewHolder<T>>() : RecyclerView.Adapter<VH>() {
+abstract class BaseRecyclerAdapter<T: Any, VH: BaseViewHolder<T>> : RecyclerView.Adapter<VH>() {
 
     val items: ArrayList<T> = arrayListOf()
 
