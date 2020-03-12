@@ -19,6 +19,7 @@ class BookViewHolder(view: View): BaseViewHolder<Book>(view) {
         title.text = item.title
         note?.text = item.note.toString()
         price.text = itemView.context.getString(R.string.book_price, item.price)
+        // TODO Part IX
         description?.text = item.description
     }
 
