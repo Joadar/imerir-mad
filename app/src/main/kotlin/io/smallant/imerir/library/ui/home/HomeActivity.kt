@@ -1,11 +1,12 @@
 package io.smallant.imerir.library.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import io.smallant.imerir.library.Constants
 import io.smallant.imerir.library.R
 import io.smallant.imerir.library.data.models.Book
 import io.smallant.imerir.library.data.models.Section
@@ -30,7 +31,21 @@ class HomeActivity : AppCompatActivity(), OnSectionClickListener {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         }
 
-        recyclerAdapter.setItems(viewModel.sections)
+        viewModel.books.observe(this, Observer { books ->
+            val sections = arrayListOf(
+                Section(
+                    Constants.Section.FEATURED_ID,
+                    "Featured",
+                    books
+                ),
+                Section(
+                    Constants.Section.LATESTED_ID,
+                    "Latested",
+                    books
+                )
+            )
+            recyclerAdapter.setItems(sections)
+        })
 
     }
 
