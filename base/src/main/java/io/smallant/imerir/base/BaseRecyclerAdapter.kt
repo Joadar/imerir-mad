@@ -1,4 +1,4 @@
-package io.smallant.imerir.library.base
+package io.smallant.imerir.base
 
 import androidx.recyclerview.widget.RecyclerView
 

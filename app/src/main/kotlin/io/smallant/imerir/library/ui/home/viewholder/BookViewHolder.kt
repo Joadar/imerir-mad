@@ -3,8 +3,8 @@ package io.smallant.imerir.library.ui.home.viewholder
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import io.smallant.imerir.base.BaseViewHolder
 import io.smallant.imerir.library.R
-import io.smallant.imerir.library.base.BaseViewHolder
 import io.smallant.imerir.library.data.models.Book
 import io.smallant.imerir.library.extensions.setImage
 

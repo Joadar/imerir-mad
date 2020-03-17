@@ -3,9 +3,9 @@ package io.smallant.imerir.library.ui.home.viewholder
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import io.smallant.imerir.base.BaseViewHolder
 import io.smallant.imerir.library.Constants
 import io.smallant.imerir.library.R
-import io.smallant.imerir.library.base.BaseViewHolder
 import io.smallant.imerir.library.data.models.Section
 import io.smallant.imerir.library.ui.home.OnSectionClickListener
 import io.smallant.imerir.library.ui.home.recycleradapter.FeaturedBookRecyclerAdapter

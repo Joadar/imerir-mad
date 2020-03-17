@@ -2,8 +2,8 @@ package io.smallant.imerir.library.ui.detail.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import io.smallant.imerir.base.BaseRecyclerAdapter
 import io.smallant.imerir.library.R
-import io.smallant.imerir.library.base.BaseRecyclerAdapter
 import io.smallant.imerir.library.data.models.Comment
 import io.smallant.imerir.library.ui.detail.viewholder.CommentViewHolder
 

@@ -1,2 +1,3 @@
 rootProject.name='Library'
 include ':app'
+include ':base'

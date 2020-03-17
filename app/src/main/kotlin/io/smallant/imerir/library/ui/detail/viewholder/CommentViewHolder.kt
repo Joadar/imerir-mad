@@ -2,8 +2,8 @@ package io.smallant.imerir.library.ui.detail.viewholder
 
 import android.view.View
 import android.widget.TextView
+import io.smallant.imerir.base.BaseViewHolder
 import io.smallant.imerir.library.R
-import io.smallant.imerir.library.base.BaseViewHolder
 import io.smallant.imerir.library.data.models.Comment
 
 class CommentViewHolder(view: View): BaseViewHolder<Comment>(view) {
